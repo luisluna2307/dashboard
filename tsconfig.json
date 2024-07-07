@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["dom", "es2015"],
-    "module": "commonjs",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
 
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
