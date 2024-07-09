@@ -3,7 +3,15 @@ import Paper from '@mui/material/Paper';
 
 export default function WeatherChart() {
 
-	{/* Datos de las variables meteorológicas */}
+    {/* Configuración */}
+
+    let options = {
+        title: "Precipitación, Humedad y Nubosidad vs Hora",
+        curveType: "function",
+        legend: { position: "right" },
+    }
+
+    {/* Datos de las variables meteorológicas */}
 
     const data = [
         ["Hora", "Precipitación", "Humedad", "Nubosidad"],
@@ -19,25 +27,20 @@ export default function WeatherChart() {
     {/* JSX */}
 
     return (
-		<Paper
-			sx={{
-				p: 2,
-				display: 'flex',
-				flexDirection: 'column'
-			}}
-		>
-			<Chart
-				chartType="LineChart"
-				data={data}
-				width="100%"
-				height="400px"
-				options={{
-					title: "Precipitación, Humedad y Nubosidad vs Hora",
-					curveType: "function",
-					legend: { position: "right" },
-				}}
-				
-		/>
-		</Paper>
+        <Paper
+            sx={{
+                p: 2,
+                display: 'flex',
+                flexDirection: 'column'
+            }}
+        >
+            <Chart
+                chartType="LineChart"
+                data={data}
+                width="100%"
+                height="400px"
+                options={options}
+        />
+        </Paper>
     )
 }	
