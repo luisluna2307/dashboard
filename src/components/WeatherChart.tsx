@@ -1,39 +1,37 @@
 import { Chart } from "react-google-charts";
 import Paper from "@mui/material/Paper";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function WeatherChart() {
-  // Datos de las variables meteorológicas
-  const data = [
-    ["Hora", "Precipitación", "Humedad", "Nubosidad"],
-    ["03:00", 13, 78, 75],
-    ["06:00", 4, 81, 79],
-    ["09:00", 7, 82, 69],
-    ["12:00", 3, 73, 62],
-    ["15:00", 4, 66, 75],
-    ["18:00", 6, 64, 84],
-    ["21:00", 5, 77, 99],
-  ];
+  const [weatherData, setWeatherData] = useState<any[]>([]);
 
-  // Estado para mantener la hora seleccionada
-  const [selectedHour, setSelectedHour] = useState<string | null>(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const API_KEY = "d25ba91f8dfdffbc7af99e1b3f7d5e80";
+        const response = await fetch(
+          `https://api.openweathermap.org/data/2.5/forecast?q=Guayaquil&mode=json&appid=${API_KEY}`
+        );
+        const data = await response.json();
+        // Aquí parseas y procesas los datos según la estructura de la respuesta JSON
+        const formattedData = formatData(data); // Función que formatea los datos según necesites
+        setWeatherData(formattedData);
+      } catch (error) {
+        console.error("Error fetching weather data:", error);
+      }
+    };
 
-  // Función para manejar el cambio de selección de hora
-  const handleHourSelection = (hour: string) => {
-    setSelectedHour(hour);
+    fetchData();
+  }, []);
+
+  const formatData = (data: any) => {
+    // Aquí puedes procesar los datos como lo necesites para el gráfico
+    // Por ejemplo, extraer la temperatura, humedad, etc.
+    const formatted = data.list.map((item: any) => {
+      return [item.dt_txt, item.main.temp, item.main.humidity];
+    });
+    return formatted;
   };
-
-  // Configuración de opciones para el gráfico
-  const options = {
-    title: "Precipitación, Humedad y Nubosidad vs Hora",
-    curveType: "function",
-    legend: { position: "right" },
-  };
-
-  // Filtrar datos basados en la hora seleccionada
-  const filteredData = selectedHour
-    ? data.filter((row) => row[0] === selectedHour)
-    : data;
 
   return (
     <Paper
@@ -43,27 +41,16 @@ export default function WeatherChart() {
         flexDirection: "column",
       }}
     >
-      {/* Dropdown para seleccionar la hora */}
-      <select
-        onChange={(e) => handleHourSelection(e.target.value)}
-        value={selectedHour || ""}
-        style={{ marginBottom: "1rem", maxWidth: "200px" }}
-      >
-        <option value="">Selecciona una hora</option>
-        {data.slice(1).map((row) => (
-          <option key={row[0]} value={row[0]}>
-            {row[0]}
-          </option>
-        ))}
-      </select>
-
-      {/* Chart component */}
       <Chart
         chartType="LineChart"
-        data={filteredData}
+        data={[["Time", "Temperature", "Humidity"], ...weatherData]}
         width="100%"
         height="400px"
-        options={options}
+        options={{
+          title: "Weather Forecast",
+          curveType: "function",
+          legend: { position: "bottom" },
+        }}
       />
     </Paper>
   );
