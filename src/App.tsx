@@ -300,7 +300,7 @@ function App() {
               className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
               src={clockImage}
               alt="Hora Actual"
-              height="100"
+              height="50"
             />
             <div className="MuiCardContent-root text-center">
               <h2 className="MuiTypography-root MuiTypography-h6 text-primary mb-2">
