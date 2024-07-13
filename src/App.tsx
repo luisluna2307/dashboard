@@ -290,13 +290,30 @@ function App() {
           Información general
         </h2>
       </Grid>
-      <Grid xs={6} md={3} lg={2} id="current-time">
+      <Grid xs={12} md={6} lg={4}>
         <div className="current-time-container">
-          <div className="icon">
-            <img src={clockImage} alt="Hora Actual" />
+          <h1 className="MuiTypography-root MuiTypography-h5 text-center my-3">
+            Reloj
+          </h1>
+          <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root mb-4 shadow-sm">
+            <img
+              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+              src={clockImage}
+              alt="Hora Actual"
+              height="200"
+            />
+            <div className="MuiCardContent-root text-center">
+              <h2 className="MuiTypography-root MuiTypography-h6 text-primary mb-2">
+                Hora Actual
+              </h2>
+              <p className="MuiTypography-root MuiTypography-h4 font-weight-bold mb-2">
+                {currentTime.toLocaleTimeString()}
+              </p>
+              <p className="MuiTypography-root MuiTypography-body1">
+                Tu Ciudad, {new Date().toLocaleDateString()}
+              </p>
+            </div>
           </div>
-          <h2>Hora Actual</h2>
-          <p>{currentTime.toLocaleTimeString()}</p>
         </div>
       </Grid>
       <Grid xs={6} md={4} lg={2}>
