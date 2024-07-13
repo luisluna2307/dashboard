@@ -1,10 +1,6 @@
 React + TypeScript + Vite
 Este proyecto proporciona una configuración mínima para trabajar con React en Vite, aprovechando el HMR (Hot Module Replacement) y algunas reglas ESLint configuradas.
 
-Aquí tienes un ejemplo de lo que puedes poner en el README de tu proyecto de Dashboard del Clima en Guayaquil, Ecuador:
-
----
-
 # Dashboard del Clima en Guayaquil, Ecuador
 
 Este proyecto es un Dashboard interactivo que muestra información meteorológica actualizada de la ciudad de Guayaquil, Ecuador. Utiliza la API de OpenWeatherMap para obtener datos meteorológicos y presenta la información de manera visual y fácil de entender.
