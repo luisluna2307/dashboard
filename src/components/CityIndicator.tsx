@@ -28,7 +28,8 @@ export default function CityIndicator(config: CityConfig) {
         <strong>País:</strong> {config.country}
       </Typography>
       <Typography variant="body1">
-        <strong>Zona Horaria:</strong> {"UTC-5"}
+        <strong>Zona Horaria:</strong> {"UTC-5 "}
+        {config.timezone}
       </Typography>
       <Typography variant="body1">
         <strong>Latitud:</strong> {config.latitude}

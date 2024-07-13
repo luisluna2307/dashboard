@@ -272,18 +272,18 @@ function App() {
               <a href="#general-info">Información General</a>
             </li>
             <li>
-              <a href="#weather-forecast">Pronóstico de la semana</a>
+              <a href="#weather-forecast">Pronóstico Semanal</a>
             </li>
             <li>
               <a href="#climate-trends">Tendencias Climáticas</a>
             </li>
             <li>
-              <a href="#detailed-forecast">Pronósticos Detallados</a>
+              <a href="#detailed-forecast">Análisis del Pronóstico</a>
             </li>
           </ul>
         </nav>
       </Grid>
-      <Grid xs={12} md={12} lg={12} id="general-info">
+      <Grid xs={10} md={10} lg={10} id="general-info">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
           Información general
@@ -310,10 +310,10 @@ function App() {
         </Grid>
       ))}
 
-      <Grid xs={12} md={12} lg={12} id="weather-forecast">
+      <Grid xs={10} md={10} lg={10} id="weather-forecast">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
-          Pronóstico de la semana
+          Pronóstico Meteorológico Semanal
         </h2>
       </Grid>
 
@@ -328,10 +328,10 @@ function App() {
         </Grid>
       ))}
 
-      <Grid xs={12} md={12} lg={12} id="climate-trends">
+      <Grid xs={10} md={10} lg={10} id="climate-trends">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
-          Tendencias climáticas
+          Historial y Tendencias Climáticas
         </h2>
       </Grid>
       <Grid xs={12} lg={2}>
@@ -340,10 +340,10 @@ function App() {
       <Grid xs={12} lg={10}>
         <WeatherChart data={chartData} />
       </Grid>
-      <Grid xs={12} md={12} lg={12} id="detailed-forecast">
+      <Grid xs={10} md={10} lg={10} id="detailed-forecast">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
-          Pronósticos detallados
+          Análisis del Pronóstico
         </h2>
       </Grid>
       <Grid xs={12} md={12} lg={12}>
