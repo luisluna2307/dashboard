@@ -265,7 +265,7 @@ function App() {
   }, [selectedVariable, originalChartData]);
 
   return (
-    <Grid container spacing={5}>
+    <Grid container spacing={5} justifyContent="center">
       <Grid xs={12} md={12} lg={12}>
         <nav className="nav">
           <h1>Dashboard</h1>
@@ -291,7 +291,7 @@ function App() {
           Información general
         </h2>
       </Grid>
-      <Grid xs={6} md={6} lg={6} id="current-time">
+      <Grid xs={6} md={3} lg={2} id="current-time">
         <div className="current-time-container">
           <h2>Hora Actual</h2>
           <p>{currentTime.toLocaleTimeString()}</p>

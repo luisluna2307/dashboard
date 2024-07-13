@@ -16,6 +16,7 @@ interface Row {
   pressure: string;
   humidity: string;
   visibility: string;
+  uv: string;
 }
 
 interface Config {
@@ -58,6 +59,9 @@ export default function BasicTable({ rows: initialRows }: Config) {
             <TableCell align="right">
               <strong>Visibilidad</strong>
             </TableCell>
+            <TableCell align="right">
+              <strong>UV</strong>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -76,6 +80,8 @@ export default function BasicTable({ rows: initialRows }: Config) {
               <TableCell align="right">{row.pressure}</TableCell>
               <TableCell align="right">{row.humidity}</TableCell>
               <TableCell align="right">{row.visibility}</TableCell>
+              <TableCell align="right">{row.uv}</TableCell>{" "}
+              {/* Renderizar UV */}
             </TableRow>
           ))}
         </TableBody>
