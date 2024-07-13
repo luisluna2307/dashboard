@@ -283,7 +283,7 @@ function App() {
           </ul>
         </nav>
       </Grid>
-      <Grid xs={10} md={10} lg={10} id="general-info">
+      <Grid xs={12} md={12} lg={12} id="general-info">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
           Información general
@@ -310,7 +310,7 @@ function App() {
         </Grid>
       ))}
 
-      <Grid xs={10} md={10} lg={10} id="weather-forecast">
+      <Grid xs={12} md={12} lg={12} id="weather-forecast">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
           Pronóstico Meteorológico Semanal
@@ -328,7 +328,7 @@ function App() {
         </Grid>
       ))}
 
-      <Grid xs={10} md={10} lg={10} id="climate-trends">
+      <Grid xs={12} md={12} lg={12} id="climate-trends">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
           Historial y Tendencias Climáticas
@@ -340,7 +340,7 @@ function App() {
       <Grid xs={12} lg={10}>
         <WeatherChart data={chartData} />
       </Grid>
-      <Grid xs={10} md={10} lg={10} id="detailed-forecast">
+      <Grid xs={12} md={12} lg={12} id="detailed-forecast">
         <h2 style={{ color: "black", textAlign: "left" }}>
           {" "}
           Análisis del Pronóstico
