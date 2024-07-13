@@ -17,7 +17,7 @@ export default function ControlPanel({ onChange }: ControlPanelProps) {
   const items = [
     { name: "Precipitación", value: "precipitation" },
     { name: "Humedad", value: "humidity" },
-    { name: "Nubosidad", value: "clouds" },
+    { name: "z", value: "clouds" },
     { name: "General", value: "all" },
   ];
 
