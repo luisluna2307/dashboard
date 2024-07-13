@@ -5,6 +5,7 @@ import Summary from "./components/Summary";
 import BasicTable from "./components/BasicTable";
 import WeatherChart from "./components/WeatherChart";
 import ControlPanel from "./components/ControlPanel";
+import clockImage from "./assets/reloj.png";
 import { useEffect, useState } from "react";
 
 import "./App.css";
@@ -292,7 +293,7 @@ function App() {
       <Grid xs={6} md={3} lg={2} id="current-time">
         <div className="current-time-container">
           <div className="icon">
-            <img src="src\assets\reloj.jpg" alt="Hora Actual" />
+            <img src={clockImage} alt="Hora Actual" />
           </div>
           <h2>Hora Actual</h2>
           <p>{currentTime.toLocaleTimeString()}</p>
