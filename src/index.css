@@ -1,68 +1,78 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* index.css */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Estilos para secciones específicas de App.tsx */
+#general-info,
+#weather-forecast,
+#climate-trends,
+#detailed-forecast {
+  margin-top: 2rem; /* Margen superior */
+  margin-bottom: 2rem; /* Margen inferior */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Estilos para el encabezado de la aplicación */
+.nav {
+  background-color: #1a1a1a; /* Fondo oscuro para el encabezado */
+  padding: 1rem; /* Relleno interno */
+  margin-bottom: 2rem; /* Margen inferior */
 }
 
-body {
-  margin: 0;
+.nav h1 {
+  color: #ffffff; /* Texto blanco para el título */
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  margin: 0; /* Eliminar margen interno */
+}
+
+.nav ul {
+  list-style-type: none; /* Sin viñetas en la lista */
+  padding: 0; /* Eliminar relleno interno */
+  display: flex; /* Mostrar elementos en línea */
+}
+
+.nav ul li {
+  margin-right: 1rem; /* Margen derecho entre elementos */
+}
+
+.nav ul li a {
+  color: #ffffff; /* Texto blanco para enlaces */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Peso de fuente */
+  transition: color 0.3s ease; /* Transición de color */
+}
+
+.nav ul li a:hover {
+  color: #646cff; /* Color de enlace al pasar el cursor */
+}
+
+/* Estilos para los componentes en cuadrícula */
+.GridItem {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff; /* Fondo blanco para cuadrículas */
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
 }
 
+.GridItem:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Media Query para modo claro */
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  .nav {
+    background-color: #f9f9f9; /* Fondo claro para el encabezado en modo claro */
   }
-  a:hover {
-    color: #747bff;
+  .nav h1 {
+    color: #1a1a1a; /* Texto oscuro para el título en modo claro */
   }
-  button {
-    background-color: #f9f9f9;
+  .nav ul li a {
+    color: #1a1a1a; /* Texto oscuro para enlaces en modo claro */
+  }
+  .GridItem {
+    background-color: #f9f9f9; /* Fondo claro para cuadrículas en modo claro */
   }
 }

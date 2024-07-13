@@ -20,35 +20,14 @@ function App() {
   const [originalChartData, setOriginalChartData] = useState([]);
   const [selectedVariable, setSelectedVariable] = useState("all");
 
-  {
-    /* Hook: useEffect */
-  }
-
-  {
-    /* Función para el efecto secundario a ejecutar y Arreglo de dependencias */
-  }
-
   useEffect(() => {
     (async () => {
       let savedTextXML = localStorage.getItem("openWeatherMap");
       let expiringTime = localStorage.getItem("expiringTime");
 
-      {
-        /* 3. Obtenga la estampa de tiempo actual */
-      }
-
       let nowTime = new Date().getTime();
 
-      {
-        /* 4. Realiza la petición asicrónica cuando: 
-                (1) La estampa de tiempo de expiración (expiringTime) es nula, o  
-                (2) La estampa de tiempo actual es mayor al tiempo de expiración */
-      }
-
       if (expiringTime === null || nowTime > parseInt(expiringTime)) {
-        {
-          /* 5. Request */
-        }
 
         let API_KEY = "d25ba91f8dfdffbc7af99e1b3f7d5e80";
         let response = await fetch(
@@ -56,16 +35,9 @@ function App() {
         );
         savedTextXML = await response.text();
 
-        {
-          /* 6. Diferencia de tiempo */
-        }
 
         let hours = 1;
         let delay = hours * 3600000;
-
-        {
-          /* 7. En el LocalStorage, almacena texto en la clave openWeatherMap y la estampa de tiempo de expiración */
-        }
 
         localStorage.setItem("openWeatherMap", savedTextXML);
         localStorage.setItem("expiringTime", (nowTime + delay).toString());
@@ -75,13 +47,6 @@ function App() {
       const xml = parser.parseFromString(savedTextXML, "application/xml");
 
       let dataToCityIndicator = new Array();
-
-      {
-        /* 
-                 Análisis, extracción y almacenamiento del contenido del XML 
-                 en el arreglo de resultados
-             */
-      }
 
       let location = xml.getElementsByTagName("location")[0];
       let locationNode = location.getElementsByTagName("location")[0];
@@ -253,8 +218,6 @@ function App() {
           humidity: `${humidity}%`,
           visibility: visibility,
         });
-
-        // Parar cuando tengamos 6 días de pronóstico
         if (summaryData.length >= 6) {
           break;
         }
