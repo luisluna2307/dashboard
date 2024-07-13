@@ -2,7 +2,6 @@ import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import Indicator from "./components/Indicator";
 import CityIndicator from "./components/CityIndicator";
 import Summary from "./components/Summary";
-import Nav from "./Nav";
 import BasicTable from "./components/BasicTable";
 import WeatherChart from "./components/WeatherChart";
 import ControlPanel from "./components/ControlPanel";
@@ -268,9 +267,23 @@ function App() {
   return (
     <Grid container spacing={5}>
       <Grid xs={12} md={12} lg={12}>
-        <div className="App">
-          <Nav />
-        </div>
+        <nav className="nav">
+          <h1>Dashboard</h1>
+          <ul>
+            <li>
+              <a href="#general-info">Información General</a>
+            </li>
+            <li>
+              <a href="#weather-forecast">Pronóstico de la semana</a>
+            </li>
+            <li>
+              <a href="#climate-trends">Tendencias Climáticas</a>
+            </li>
+            <li>
+              <a href="#detailed-forecast">Pronósticos Detallados</a>
+            </li>
+          </ul>
+        </nav>
       </Grid>
       <Grid xs={12} md={12} lg={12} id="general-info">
         <h2 style={{ color: "black", textAlign: "left" }}>
