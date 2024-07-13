@@ -292,7 +292,7 @@ function App() {
       <Grid xs={6} md={3} lg={2} id="current-time">
         <div className="current-time-container">
           <div className="icon">
-            <img src="./assets/reloj.jpg" alt="Hora Actual" />
+            <img src="src\assets\reloj.jpg" alt="Hora Actual" />
           </div>
           <h2>Hora Actual</h2>
           <p>{currentTime.toLocaleTimeString()}</p>
