@@ -2,25 +2,25 @@
 #weather-forecast,
 #climate-trends,
 #detailed-forecast {
-  margin-top: 2rem; /* Margen superior */
-  margin-bottom: 2rem; /* Margen inferior */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .nav {
-  background-color: #1a1a1a; /* Fondo oscuro para el encabezado */
-  padding: 1rem; /* Relleno interno */
-  margin-bottom: 2rem; /* Margen inferior */
+  background-color: #1a1a1a;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .nav h1 {
-  color: #ffffff; /* Texto blanco para el título */
-  font-size: 2.5rem; /* Tamaño de fuente grande */
-  margin: 0; /* Eliminar margen interno */
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 .nav ul {
-  list-style-type: none; /* Sin viñetas en la lista */
-  padding: 0; /* Eliminar relleno interno */
-  display: flex; /* Mostrar elementos en línea */
+  list-style-type: none;
+  padding: 0;
+  display: flex;
 }
 
 .nav ul li {
@@ -44,15 +44,15 @@
   align-items: center;
   text-align: center;
   padding: 1rem;
-  background-color: #ffffff; /* Fondo blanco para cuadrículas */
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .GridItem:hover {
-  transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 #current-time {
@@ -77,15 +77,15 @@
 /* Media Query para modo claro */
 @media (prefers-color-scheme: light) {
   .nav {
-    background-color: #f9f9f9; /* Fondo claro para el encabezado en modo claro */
+    background-color: #f9f9f9;
   }
   .nav h1 {
-    color: #1a1a1a; /* Texto oscuro para el título en modo claro */
+    color: #1a1a1a;
   }
   .nav ul li a {
-    color: #1a1a1a; /* Texto oscuro para enlaces en modo claro */
+    color: #1a1a1a;
   }
   .GridItem {
-    background-color: #f9f9f9; /* Fondo claro para cuadrículas en modo claro */
+    background-color: #f9f9f9;
   }
 }

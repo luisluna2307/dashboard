@@ -137,7 +137,6 @@ function App() {
         "Sábado",
       ];
 
-      // Variables para controlar los días ya agregados
       let currentDay = new Date().getDate();
       let addedDays = [];
 
@@ -175,14 +174,13 @@ function App() {
           parseFloat(clouds),
         ]);
 
-        // Añadir solo un pronóstico por día y saltar el día actual
         if (
           date.getDate() !== currentDay &&
           !addedDays.includes(date.getDate())
         ) {
           summaryData.push({
             day: day,
-            temperature: `${(parseFloat(temperature) - 273.15).toFixed(1)}°C`, // Convertir de Kelvin a Celsius
+            temperature: `${(parseFloat(temperature) - 273.15).toFixed(1)}°C`,
             date: formattedDate,
             icon: icon,
           });
