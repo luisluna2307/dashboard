@@ -300,7 +300,7 @@ function App() {
               className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
               src={clockImage}
               alt="Hora Actual"
-              height="200"
+              height="100"
             />
             <div className="MuiCardContent-root text-center">
               <h2 className="MuiTypography-root MuiTypography-h6 text-primary mb-2">
@@ -310,7 +310,7 @@ function App() {
                 {currentTime.toLocaleTimeString()}
               </p>
               <p className="MuiTypography-root MuiTypography-body1">
-                Tu Ciudad, {new Date().toLocaleDateString()}
+                Guayaquil, {new Date().toLocaleDateString()}
               </p>
             </div>
           </div>
