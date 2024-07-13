@@ -1,6 +1,3 @@
-/* index.css */
-
-/* Estilos para secciones específicas de App.tsx */
 #general-info,
 #weather-forecast,
 #climate-trends,
@@ -8,8 +5,6 @@
   margin-top: 2rem; /* Margen superior */
   margin-bottom: 2rem; /* Margen inferior */
 }
-
-/* Estilos para el encabezado de la aplicación */
 .nav {
   background-color: #1a1a1a; /* Fondo oscuro para el encabezado */
   padding: 1rem; /* Relleno interno */
@@ -29,21 +24,20 @@
 }
 
 .nav ul li {
-  margin-right: 1rem; /* Margen derecho entre elementos */
+  margin-right: 1rem;
 }
 
 .nav ul li a {
-  color: #ffffff; /* Texto blanco para enlaces */
-  text-decoration: none; /* Sin subrayado */
-  font-weight: 500; /* Peso de fuente */
-  transition: color 0.3s ease; /* Transición de color */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav ul li a:hover {
-  color: #646cff; /* Color de enlace al pasar el cursor */
+  color: #646cff;
 }
 
-/* Estilos para los componentes en cuadrícula */
 .GridItem {
   display: flex;
   justify-content: center;
