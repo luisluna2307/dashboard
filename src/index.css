@@ -58,20 +58,20 @@
 #current-time {
   margin-top: 20px;
   padding: 20px;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #current-time h2 {
   font-size: 1.8em;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 10px;
 }
 
 #current-time p {
   font-size: 1.4em;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Media Query para modo claro */
