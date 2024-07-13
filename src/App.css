@@ -28,12 +28,20 @@ body {
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
+  display: flex; /* Utilizamos flexbox para los elementos de la lista */
+  gap: 1rem;
+}
+.nav h1 {
+  margin: 0;
 }
 
 .nav li {
