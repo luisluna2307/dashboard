@@ -61,6 +61,25 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
 }
 
+#current-time {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#current-time h2 {
+  font-size: 1.8em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#current-time p {
+  font-size: 1.4em;
+  color: #ffffff;
+}
+
 /* Media Query para modo claro */
 @media (prefers-color-scheme: light) {
   .nav {

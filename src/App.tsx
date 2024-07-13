@@ -19,6 +19,17 @@ function App() {
   ]);
   const [originalChartData, setOriginalChartData] = useState([]);
   const [selectedVariable, setSelectedVariable] = useState("all");
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -28,13 +39,11 @@ function App() {
       let nowTime = new Date().getTime();
 
       if (expiringTime === null || nowTime > parseInt(expiringTime)) {
-
         let API_KEY = "d25ba91f8dfdffbc7af99e1b3f7d5e80";
         let response = await fetch(
           `https://api.openweathermap.org/data/2.5/forecast?q=Guayaquil&mode=xml&appid=${API_KEY}`
         );
         savedTextXML = await response.text();
-
 
         let hours = 1;
         let delay = hours * 3600000;
@@ -291,6 +300,14 @@ function App() {
           longitude={parseFloat(cityData[4])}
         />
       </Grid>
+      {/* ... */}
+      <Grid xs={12} md={12} lg={12} id="current-time">
+        <div className="current-time-container">
+          <h2>Hora Actual</h2>
+          <p>{currentTime.toLocaleTimeString()}</p>
+        </div>
+      </Grid>
+      {/* ... */}
 
       {indicators.map((indicator, index) => (
         <Grid key={index} xs={6} md={4} lg={2}>
