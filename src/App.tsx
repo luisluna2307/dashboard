@@ -300,14 +300,12 @@ function App() {
           longitude={parseFloat(cityData[4])}
         />
       </Grid>
-      {/* ... */}
-      <Grid xs={12} md={12} lg={12} id="current-time">
+      <Grid xs={6} md={4} lg={2} id="current-time">
         <div className="current-time-container">
           <h2>Hora Actual</h2>
           <p>{currentTime.toLocaleTimeString()}</p>
         </div>
       </Grid>
-      {/* ... */}
 
       {indicators.map((indicator, index) => (
         <Grid key={index} xs={6} md={4} lg={2}>
